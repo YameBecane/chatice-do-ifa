@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montenegrin+Gothic+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Meu Ifa</title>
+</head>
+
+<body>
+    <header>
+        <div class="itens">
+            <h1>Meu ifa</h1>
+            <div class="dropdown">
+                <button class="dropbtn" id="dropBtn">☰ Menu</button>
+                <div class="dropdown-content" id="dropContent">
+                    <a href="#">Mecânica</a>
+                    <a href="#">Ótica</a>
+                    <a href="#">Elétrica</a>
+                    <a href="#">Hidráulica</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <!-- conteúdo aqui -->
+    </div>
+
+    <baseboard class="baseb">
+        <p>Este site foi desenvolvido por um estudante do ensino medio, <a class="linkName" href="#">by Soares. E. S</a></p>
+    </baseboard>
+
+    <script>
+        // JavaScript para abrir/fechar com clique
+        const dropBtn = document.getElementById('dropBtn');
+        const dropContent = document.getElementById('dropContent');
+
+        dropBtn.addEventListener('click', function (event) {
+            event.stopPropagation();
+            dropContent.classList.toggle('show');
+        });
+
+        // Fecha o dropdown se clicar fora
+        window.addEventListener('click', function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                dropContent.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+
+</html>
